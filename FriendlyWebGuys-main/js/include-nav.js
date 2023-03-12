@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{var xhr=new XMLHttpRequest();xhr.open('GET','nav.html',true);xhr.onreadystatechange=function(){if(this.readyState!==4)return;if(this.status!==200)return;document.querySelector('nav').innerHTML=this.responseText;};xhr.send();});

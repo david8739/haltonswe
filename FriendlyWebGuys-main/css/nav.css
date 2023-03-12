@@ -1,0 +1,107 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+:root {
+    --free-consult-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: var(--nav-height);
+    padding: 0 36px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    overflow: hidden;
+    /* background: var(--secondary-color); */
+}
+
+#logo {
+    height: auto;
+    width: 200px;
+}
+
+#nav-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: none;
+}
+
+.nav-link {
+    margin: 0 15px;
+}
+
+.free-consult {
+    background: var(--primary-color);
+    padding: 14px 28px;
+    border-radius: 28px;
+    margin-right: 0;
+    -webkit-box-shadow: var(--free-consult-box-shadow);
+            box-shadow: var(--free-consult-box-shadow);
+    -webkit-transition-duration: .25s;
+         -o-transition-duration: .25s;
+            transition-duration: .25s;
+
+}
+
+#free-consult-menu {
+    margin-top: auto !important;
+}
+
+@media (min-aspect-ratio: 1/1) {
+
+    #menu-toggle-phone {
+        display: none !important;
+    }
+
+    #nav-desktop {
+        display: block;
+    }
+
+    nav {
+        padding: 0px 25px 0px 36px;
+    }
+
+}
+
+@media only screen and (max-width: 881px) {
+    #menu-toggle-phone {
+        display: block !important;
+    }
+
+    #nav-desktop {
+        display: none !important;
+    }
+
+    nav {
+        padding: 0 36px;
+    }
+}
+
+.free-consult:hover {
+    color: var(--secondary-color);
+    -webkit-transition-duration: .25s;
+         -o-transition-duration: .25s;
+            transition-duration: .25s;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
