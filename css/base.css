@@ -1,0 +1,141 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+:root {
+    --nav-height: 105px;
+    --logo-height: 70px;
+    --font-family: "Heebo", sans-serif;
+    --primary-color: #EFBF14;
+    --secondary-color: #CF0089;
+    --primary-dark-color: #030303;
+    font-size: 16px;
+    --link-color: white;
+    --bg-gradient: linear-gradient(180deg, #EA0062 0%, #8F00FF 67.71%);
+    --glassmorphism-opacity: .3;
+}
+
+/* css reset */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+html * {
+    font-family: var(--font-family) !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.global-button:hover {
+    opacity: 1;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    -webkit-transition-duration: .25s;
+         -o-transition-duration: .25s;
+            transition-duration: .25s;
+    -webkit-transition-property: opacity, -webkit-box-shadow;
+    transition-property: opacity, -webkit-box-shadow;
+    -o-transition-property: box-shadow, opacity;
+    transition-property: box-shadow, opacity;
+    transition-property: box-shadow, opacity, -webkit-box-shadow;
+}
+
+.global-button:focus {
+    outline: none;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    -webkit-transition-duration: .25s;
+         -o-transition-duration: .25s;
+            transition-duration: .25s;
+    -webkit-transition-property: opacity, -webkit-box-shadow;
+    transition-property: opacity, -webkit-box-shadow;
+    -o-transition-property: box-shadow, opacity;
+    transition-property: box-shadow, opacity;
+    transition-property: box-shadow, opacity, -webkit-box-shadow;
+    opacity: 1;
+}
+
+/* ::-webkit-scrollbar {
+ opacity: .8;
+  } */
+
+@media (max-aspect-ratio: 1/1) {
+
+    /* portrait */
+    .hidden-in-portrait {
+        display: none !important;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+
+    /* landscape */
+    .hidden-in-landscape {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .hidden-on-mobile {
+        display: none !important;
+    }
+}
+
+
+@media (min-width: 400px) and (max-width: 1200px) {
+    :root {
+        font-size: calc(16px + (21 - 16) * ((100vw - 400px) / (1200 - 400))) !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        font-size: 21px;
+    }
+}
+
+a {
+    color: var(--link-color);
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-transition-duration: .25s;
+         -o-transition-duration: .25s;
+            transition-duration: .25s;
+}
+
+a:hover {
+    /* color: red; */
+    color: var(--primary-color);
+    -webkit-transition-duration: .25s;
+         -o-transition-duration: .25s;
+            transition-duration: .25s;
+}
+
+a:active {
+    color: var(--secondary-color) !important;
+}
